@@ -21,3 +21,10 @@ createdAt: 2022-06-18T04:11:12.780+00:00
 updatedAt: 2022-06-18T04:11:12.780+00:00
 
 ```
+
+## Datos en .env de variables de entorno
+
+- PORT=3000 
+- BD_CNN=mongodb://localhost:27017/files
+
+## npm run dev
