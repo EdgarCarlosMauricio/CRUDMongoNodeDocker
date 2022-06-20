@@ -1,5 +1,3 @@
-// const { response } = require('express');
-// const { request } = require('../app');
 const File = require('../models/File');
 
 
@@ -27,7 +25,6 @@ const getFileById = async function (req, res) {
 //Update file simply
 const updateFileById = async function (req, res) {
     try {
-        //console.log('update', req.body)
         const archivo = await File.findByIdAndUpdate(req.params.fileId, req.body, { new: true });
         return res.status(200).json(archivo);
     } catch (error) {
@@ -56,7 +53,6 @@ const createFile = async function (req, res) {
         }
         const newFile = new File(bodyFile);
         const FileSave = await newFile.save();
-        //console.log('Archivo Guardado', FileSave);
         return res.status(201).json({ msg: 'Archivo Guardado' });
     } catch (error) {
         return res.status(500).json({ msg: 'Error Al Guardar Archivo' });

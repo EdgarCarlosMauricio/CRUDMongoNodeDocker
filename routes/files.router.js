@@ -1,16 +1,11 @@
 const { Router } = require('express');
-const { getFiles, getFileById, updateFileById, deleteFileById, createFile } = require('../controllers/Files.controller');
+const File = require('../controllers/Files.controller');
 const router = Router();
 
-//all Files
-router.get('/', getFiles);
-//Find a user
-router.get('/:fileId', getFileById);
-//Create File
-router.post('/', createFile);
-//Update user
-router.put('/:fileId', updateFileById);
-//Delete
-router.delete('/:fileId', deleteFileById);
+router.get('/', File.getFiles);
+router.get('/:fileId', File.getFileById);
+router.post('/', File.createFile);
+router.put('/:fileId', File.updateFileById);
+router.delete('/:fileId', File.deleteFileById);
 
 module.exports = router;
