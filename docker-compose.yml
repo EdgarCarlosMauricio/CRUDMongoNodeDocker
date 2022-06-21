@@ -8,11 +8,14 @@ services:
     links:
       - mongo
     volumes:
-      - .:/usr/src/app
+      - .:/home/node/app
+    environment: 
+      BD_CNN: mongodb://mongo:27017/files
+      PORT: 3000
   mongo:
     container_name: mymongodatabase
     image: mongo
     ports:
-      - "27018:27017"
+      - "27017:27017"
     logging:
       driver: none
