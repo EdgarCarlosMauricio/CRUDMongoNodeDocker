@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const File = require('../controllers/Files.controller');
+const File = require('../controllers/files.controller');
 const router = Router();
 
 router.get('/', File.getFiles);

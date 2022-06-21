@@ -11,6 +11,7 @@ USER node
 RUN npm install
 
 COPY --chown=node:node . .
+# COPY . .
 
 EXPOSE 3000
 

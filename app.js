@@ -1,6 +1,3 @@
-// const mongoose = require('mongoose')
-// const url = 'mongodb://localhost/files'
-
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
